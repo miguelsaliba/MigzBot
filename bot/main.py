@@ -5,6 +5,7 @@ import os
 bot = commands.Bot(command_prefix="m.")
 token = os.getenv("DISCORD_BOT_TOKEN")
 admins = os.getenv("ADMIN_IDS").split(",")
+admins = [int(i) for i in admins]
 
 @bot.event
 async def on_ready() :
